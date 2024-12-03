@@ -2,4 +2,4 @@
 Legends Never Die
 
 
-https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTB1Y3p4aW5uaDZ1N2NxaGZrempqdjM5em42aWxneXhvaTIydGU4OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Rd7pEbE7rjZz8vySuU/giphy.gif
+<div style="width:100%;height:0;padding-bottom:53%;position:relative;"><iframe src="https://giphy.com/embed/Rd7pEbE7rjZz8vySuU" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/reaction-Rd7pEbE7rjZz8vySuU">via GIPHY</a></p>
