@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lycan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1a1a1a; /* Dark background for a badass look */
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #ff6347; /* Cool red color for the title */
+    }
+
+    /* Glitch effect class */
+    .glitch {
+      position: relative;
+      display: inline-block;
+      color: #f1eeed; /* Red color for the glitch text */
+    }
+
+    .glitch:before,
+    .glitch:after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #ff6347; /* Cyan color */
+      clip-path: inset(0 0 0 0);
+      animation: glitch 1s infinite linear alternate-reverse;
+    }
+
+    .glitch:after {
+      left: 2px;
+      animation-delay: 0.2s;
+    }
+
+    @keyframes glitch {
+      0% {
+        clip-path: inset(0 0 0 0);
+        transform: translate(0);
+      }
+      20% {
+        clip-path: inset(10% 0 30% 0);
+        transform: translate(-10px, 5px);
+      }
+      40% {
+        clip-path: inset(20% 0 20% 0);
+        transform: translate(10px, -5px);
+      }
+      60% {
+        clip-path: inset(10% 0 10% 0);
+        transform: translate(-15px, -5px);
+      }
+      80% {
+        clip-path: inset(0 0 0 0);
+        transform: translate(15px, 5px);
+      }
+    }
+
+    .ascii-art {
+      font-family: 'Courier', monospace;
+      text-align: center;
+      white-space: pre;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .gif-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .gif-container img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .icon-container a {
+      color: #ff6347; /* Same color as the title */
+      font-size: 2rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .icon-container a:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+
+    .tox-popup {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      color: #fff;
+      padding: 8px;
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      text-align: left;
+      width: 250px;
+      z-index: 100;
+    }
+
+    .tox-popup p {
+      margin: 0 0 8px;
+      font-size: 0.85rem;
+      word-wrap: break-word;
+    }
+
+    .tox-popup button {
+      background-color: #ff6347;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .tox-popup button:hover {
+      background-color: #fff;
+      color: #ff6347;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #bbb;
+    }
+
+    footer a {
+      color: #ff6347;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- ASCII Art Slot with Glitch effect -->
+<div class="ascii-art">
+ <div class="glitch" data-text="██╗  ██╗   ██╗ ██████╗ █████╗ ███╗   ██╗ ██████╗ ██████╗ ███╗   ██╗ ██████╗ ████████╗">██╗  ██╗   ██╗ ██████╗ █████╗ ███╗   ██╗ ██████╗ ██████╗ ███╗   ██╗ ██████╗ ████████╗</div>
+ <div class="glitch" data-text="██║  ╚██╗ ██╔╝██╔════╝██╔══██╗████╗  ██║██╔═████╗██╔══██╗████╗  ██║██╔═████╗╚══██╔══╝">██║  ╚██╗ ██╔╝██╔════╝██╔══██╗████╗  ██║██╔═████╗██╔══██╗████╗  ██║██╔═████╗╚══██╔══╝</div>
+ <div class="glitch" data-text="██║   ╚████╔╝ ██║     ███████║██╔██╗ ██║██║██╔██║██████╔╝██╔██╗ ██║██║██╔██║   ██║   ">██║   ╚████╔╝ ██║     ███████║██╔██╗ ██║██║██╔██║██████╔╝██╔██╗ ██║██║██╔██║   ██║   </div>
+ <div class="glitch" data-text="██║    ╚██╔╝  ██║     ██╔══██║██║╚██╗██║████╔╝██║██╔══██╗██║╚██╗██║████╔╝██║   ██║   ">██║    ╚██╔╝  ██║     ██╔══██║██║╚██╗██║████╔╝██║██╔══██╗██║╚██╗██║████╔╝██║   ██║   </div>
+ <div class="glitch" data-text="███████╗██║   ╚██████╗██║  ██║██║ ╚████║╚██████╔╝██║  ██║██║ ╚████║╚██████╔╝   ██║   ">███████╗██║   ╚██████╗██║  ██║██║ ╚████║╚██████╔╝██║  ██║██║ ╚████║╚██████╔╝   ██║   </div>
+ <div class="glitch" data-text="╚══════╝╚═╝    ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝    ╚═╝  ">╚══════╝╚═╝    ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝   ╚═╝  </div>
+</div>
+    
+    <h1>LEGENDS NEVER DIE</h1>
+    <div class="gif-container">
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWRhd21lYjY4enlub2ZsczJyOTM0Z2gzbmdvYno2MmN4bGVqazRkcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pO7jomKrTwfSw/giphy.gif" alt="Badass GIF">
+    </div>
+    <div class="icon-container">
+      <a href="https://github.com/1yc4n0rn0t" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://discord.com/invite/6tSbqvn7K6" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+      <a href="#" title="TOX" onclick="toggleTOXPopup(event)"><i class="fas fa-lock"></i></a>
+    </div>
+    <div class="tox-popup" id="tox-popup">
+      <p>TOX Address:</p>
+      <p id="tox-address">10DE8FAE446892FE077EDDC50AC0ABB7E3ED7B773CA95EC94DB54A28CFBA3B704CC238444F01</p>
+      <button onclick="copyTOXAddress()">Copy</button>
+    </div>
+    <footer>
+      <p>Depraved and Imperishable, destined for a deathless existence.</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleTOXPopup(event) {
+      event.preventDefault();
+      const popup = document.getElementById('tox-popup');
+      popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function copyTOXAddress() {
+      const toxAddress = document.getElementById('tox-address').textContent;
+      navigator.clipboard.writeText(toxAddress).then(() => {
+        alert('TOX address copied to clipboard!');
+      });
+    }
+  </script>
+
+</body>
+</html>
