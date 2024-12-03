@@ -1,4 +1,4 @@
-# Lycan-LND
+# Lycan
 Legends Never Die
 
 
